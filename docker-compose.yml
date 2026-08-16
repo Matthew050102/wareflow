@@ -1,0 +1,15 @@
+services:
+  postgres:
+    image: postgres:alpine
+    container_name: wareflow-postgres
+    environment:
+      - POSTGRES_DB
+      - POSTGRES_USERNAME
+      - POSTGRES_PASSWORD
+    ports:
+      - "5332:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql
+
+volumes:
+  pgdata:
