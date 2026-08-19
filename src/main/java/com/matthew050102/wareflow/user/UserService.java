@@ -11,8 +11,8 @@ import org.springframework.stereotype.Service;
 public class UserService implements UserDetailsService {
     private final UserRepository userRepository;
 
-    public UserDTO fetchUserDataByUsername(String username) {
-        User user = this.userRepository.findByUsername(username)
+    public UserDTO fetchUserDataById(String id) {
+        User user = this.userRepository.findById(id)
                 .orElseThrow(() -> new UsernameNotFoundException("Username not found!"));
         return new UserDTO(
                 user.getId(),

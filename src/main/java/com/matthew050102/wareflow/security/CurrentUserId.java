@@ -9,7 +9,7 @@ import java.lang.annotation.Target;
 
 @Target({ElementType.PARAMETER, ElementType.ANNOTATION_TYPE})
 @Retention(RetentionPolicy.RUNTIME)
-@CurrentSecurityContext(expression = "authentication.name")
-public @interface CurrentOwner {
+@CurrentSecurityContext(expression = "authentication.principal.id")
+public @interface CurrentUserId {
 
 }
