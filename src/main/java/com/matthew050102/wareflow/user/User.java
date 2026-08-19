@@ -12,21 +12,23 @@ import java.util.List;
 
 @Entity
 @Table(name = "user_data")
-@RequiredArgsConstructor
 @Getter
 @Setter
+@NoArgsConstructor
 public class User implements UserDetails {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     private String id;
+
     private String firstName;
     private String lastName;
     private String username;
     private String email;
+
     @Getter(AccessLevel.NONE)
     private String password;
 
-    public User(@NonNull String firstName, @NonNull String lastName, @NonNull String username, @NonNull String email, @NonNull String password) {
+    public User(String firstName, String lastName, String username, String email, String password) {
         this.firstName=firstName;
         this.lastName=lastName;
         this.username=username;
