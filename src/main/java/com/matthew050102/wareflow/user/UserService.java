@@ -1,4 +1,4 @@
-package com.matthew050102.wareflow.User;
+package com.matthew050102.wareflow.user;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.userdetails.UserDetails;

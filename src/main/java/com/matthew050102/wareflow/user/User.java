@@ -1,4 +1,4 @@
-package com.matthew050102.wareflow.User;
+package com.matthew050102.wareflow.user;
 
 import jakarta.persistence.*;
 import lombok.*;
