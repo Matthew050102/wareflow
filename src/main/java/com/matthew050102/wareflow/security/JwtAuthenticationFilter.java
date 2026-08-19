@@ -1,6 +1,6 @@
 package com.matthew050102.wareflow.security;
 
-import com.matthew050102.wareflow.User.UserService;
+import com.matthew050102.wareflow.user.UserService;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;

@@ -1,6 +1,6 @@
 package com.matthew050102.wareflow.security;
 
-import com.matthew050102.wareflow.User.UserService;
+import com.matthew050102.wareflow.user.UserService;
 import lombok.AllArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

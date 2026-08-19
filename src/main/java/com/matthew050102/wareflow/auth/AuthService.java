@@ -1,7 +1,7 @@
 package com.matthew050102.wareflow.auth;
 
-import com.matthew050102.wareflow.User.User;
-import com.matthew050102.wareflow.User.UserRepository;
+import com.matthew050102.wareflow.user.User;
+import com.matthew050102.wareflow.user.UserRepository;
 import com.matthew050102.wareflow.auth.dto.AuthResponse;
 import com.matthew050102.wareflow.auth.dto.LoginRequest;
 import com.matthew050102.wareflow.auth.dto.RegisterRequest;
