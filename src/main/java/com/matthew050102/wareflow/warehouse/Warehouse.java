@@ -5,16 +5,21 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import lombok.Getter;
-import lombok.RequiredArgsConstructor;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Entity
-@RequiredArgsConstructor
 @Getter
 @Setter
+@NoArgsConstructor
 public class Warehouse {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     private String id;
+
     private String name;
+
+    public Warehouse(String name) {
+        this.name = name;
+    }
 }

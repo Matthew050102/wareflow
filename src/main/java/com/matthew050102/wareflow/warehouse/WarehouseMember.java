@@ -1,22 +1,28 @@
 package com.matthew050102.wareflow.warehouse;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.Getter;
-import lombok.RequiredArgsConstructor;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Entity
-@RequiredArgsConstructor
+@NoArgsConstructor
 @Getter
 @Setter
 public class WarehouseMember {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     private String id;
-    private String userId;
+
     private String warehouseId;
+    private String userId;
+
+    @Enumerated(EnumType.STRING)
     private WarehouseRole role;
+
+    public WarehouseMember(String warehouseId, String userId, WarehouseRole role) {
+        this.warehouseId = warehouseId;
+        this.userId = userId;
+        this.role = role;
+    }
 }
