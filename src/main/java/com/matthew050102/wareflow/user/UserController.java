@@ -13,7 +13,7 @@ public class UserController {
     private final UserService userService;
 
     @GetMapping
-    public UserDTO fetchUserDataByUsername(@CurrentUserId String id) {
+    public UserDTO fetchUserDataById(@CurrentUserId String id) {
         return userService.fetchUserDataById(id);
     }
 }
